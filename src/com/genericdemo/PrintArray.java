@@ -1,9 +1,22 @@
 package com.genericdemo;
 
-public class PrintArray {
+import com.genericdemo.PrintArray;
+
+public class PrintArray<T> {
+	
+	private T[] inputArray;
+	//constructor with fields
+	public PrintArray(T[] inputArray) {
+		super();
+		this.inputArray = inputArray;
+	}
+	
+	public void toPrint(){
+		System.out.println(this.inputArray);
+	}
 
 	//method : use generic
-	private static <E> void toPrint(E[] inputArray) {
+	public static <E> void toPrint(E[] inputArray) {
 		//for each loop 
 		for(E element : inputArray) {
 			System.out.printf("%s ",element);
@@ -23,3 +36,4 @@ public class PrintArray {
 		PrintArray.toPrint(charArray);
 	}
 }
+
