@@ -24,6 +24,7 @@ public class PrintArray<T> {
 		System.out.println();
 	}
 	
+	//method : find max integer
 	public void maxInt() {
 		T max = inputArray[0];
 		for(T element : inputArray) {
@@ -33,21 +34,37 @@ public class PrintArray<T> {
 		}
 		System.out.println("Max Integer is :"+ max);
 	}
+	//method : find max float
+	public void maxFloat() {
+		T max = inputArray[0];
+		for(T element : inputArray) {
+			if (((Double) element).compareTo((Double) max) > 0) {
+				max = element;
+			}
+		}
+		System.out.println("Max Float is :"+ max);
+	}
 	
 	public static void main(String[] args) {
 		System.out.println("generic demo ");
 		//Array initialization
 		Integer [] intArray = {2,3,5,};
-		Double [] doubleArray = {2.1, 3.1, 5.1, 7.1};
+		Double [] doubleArray = {2.1, 3.1, 5.1};
 		Character [] charArray = {'A','E','I','O','U'};
 		//Print Array
 		//PrintArray.toPrint(intArray);
 		//PrintArray.toPrint(doubleArray);
 		//PrintArray.toPrint(charArray);
 		
+		//print intArray
 		new PrintArray<Integer>(intArray).toPrint();
+		//find max integer
 		new PrintArray<Integer>(intArray).maxInt();
+		//print doubleArray
 		new PrintArray<Double>(doubleArray).toPrint();
+		//find max float
+		new PrintArray<Double>(doubleArray).maxFloat();
+		//print characterArray
 		new PrintArray<Character>(charArray).toPrint();
 	}
 }
