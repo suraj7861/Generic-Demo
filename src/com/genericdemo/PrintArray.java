@@ -16,18 +16,28 @@ public class PrintArray<T> {
 	}
 
 	//method : use generic
-	public static <E> void toPrint(E[] inputArray) {
+	public static <T> void toPrint(T[] inputArray) {
 		//for each loop 
-		for(E element : inputArray) {
+		for(T element : inputArray) {
 			System.out.printf("%s ",element);
 		}
 		System.out.println();
 	}
 	
+	public void maxInt() {
+		T max = inputArray[0];
+		for(T element : inputArray) {
+			if (((Integer) element).compareTo((Integer) max) > 0) {
+				max = element;
+			}
+		}
+		System.out.println("Max Integer is :"+ max);
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("generic demo ");
 		//Array initialization
-		Integer [] intArray = {2,3,5,7,11};
+		Integer [] intArray = {2,3,5,};
 		Double [] doubleArray = {2.1, 3.1, 5.1, 7.1};
 		Character [] charArray = {'A','E','I','O','U'};
 		//Print Array
@@ -36,6 +46,7 @@ public class PrintArray<T> {
 		//PrintArray.toPrint(charArray);
 		
 		new PrintArray<Integer>(intArray).toPrint();
+		new PrintArray<Integer>(intArray).maxInt();
 		new PrintArray<Double>(doubleArray).toPrint();
 		new PrintArray<Character>(charArray).toPrint();
 	}
