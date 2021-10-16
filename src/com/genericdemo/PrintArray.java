@@ -12,7 +12,7 @@ public class PrintArray<T> {
 	}
 	
 	public void toPrint(){
-		System.out.println(this.inputArray);
+		PrintArray.toPrint(this.inputArray);
 	}
 
 	//method : use generic
@@ -31,9 +31,13 @@ public class PrintArray<T> {
 		Double [] doubleArray = {2.1, 3.1, 5.1, 7.1};
 		Character [] charArray = {'A','E','I','O','U'};
 		//Print Array
-		PrintArray.toPrint(intArray);
-		PrintArray.toPrint(doubleArray);
-		PrintArray.toPrint(charArray);
+		//PrintArray.toPrint(intArray);
+		//PrintArray.toPrint(doubleArray);
+		//PrintArray.toPrint(charArray);
+		
+		new PrintArray<Integer>(intArray).toPrint();
+		new PrintArray<Double>(doubleArray).toPrint();
+		new PrintArray<Character>(charArray).toPrint();
 	}
 }
 
