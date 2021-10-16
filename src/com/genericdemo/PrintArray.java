@@ -38,7 +38,7 @@ public class PrintArray<T> {
 	public void maxFloat() {
 		T max = inputArray[0];
 		for(T element : inputArray) {
-			if (((Double) element).compareTo((Double) max) > 0) {
+			if (((Float) element).compareTo((Float) max) > 0) {
 				max = element;
 			}
 		}
@@ -51,6 +51,7 @@ public class PrintArray<T> {
 		Integer [] intArray = {2,3,5,};
 		Double [] doubleArray = {2.1, 3.1, 5.1};
 		Character [] charArray = {'A','E','I','O','U'};
+		Float [] floatArray = {2.1f, 3.1f, 5.1f};
 		//Print Array
 		//PrintArray.toPrint(intArray);
 		//PrintArray.toPrint(doubleArray);
@@ -63,7 +64,7 @@ public class PrintArray<T> {
 		//print doubleArray
 		new PrintArray<Double>(doubleArray).toPrint();
 		//find max float
-		new PrintArray<Double>(doubleArray).maxFloat();
+		new PrintArray<Float>(floatArray).maxFloat();
 		//print characterArray
 		new PrintArray<Character>(charArray).toPrint();
 	}
