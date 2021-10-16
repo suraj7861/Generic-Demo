@@ -2,27 +2,12 @@ package com.genericdemo;
 
 public class PrintArray {
 
-	private static void toPrint(Integer[] inputArray) {
+	//method : use generic
+	private static <E> void toPrint(E[] inputArray) {
 		//for each loop 
-		for(int element : inputArray) {
+		for(E element : inputArray) {
 			System.out.printf("%s ",element);
 		}
-		System.out.println();
-	}
-	
-	private static void toPrint(Double[] inputArray) {
-		//for each loop
-		for(double element : inputArray) {
-			System.out.printf("%s ",element);
-		}	
-		System.out.println();
-	}
-	
-	private static void toPrint(Character[] inputArray) {
-		//for each loop
-		for(char element : inputArray) {
-			System.out.printf("%s ",element);
-		}	
 		System.out.println();
 	}
 	
